@@ -1,0 +1,86 @@
+https://leetcode.com/problems/first-unique-character-in-a-string/
+while finding unique first character in a string 
+	the best solution is instead of creating array or anythin or goinf thru the string
+		for(char c = 'a'; c <= 'z'; c++) do this go thru the character set
+			find its index using   int a= indexOf(c)
+			find its last index using  int a= lastIndexOf(c)
+			
+
+
+https://leetcode.com/problems/matrix-block-sum/			
+https://computersciencesource.wordpress.com/2010/09/03/computer-vision-the-integral-image/
+ summed area table
+ we take all the summ left to right top to bottom
+ sum[i][j]= mat[i][j]+sum[i-1]j +sum[i][j-1]  - sum[i-1][j-1]   this extra minus cos 
+ mat[i-1] [j-1] occurs in sum[i][j-1]  - sum[i-1][j-1] hence we reduce 1 instance
+ 
+ 
+ 
+ https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/534/week-1-may-1st-may-7th/3322/
+ in case of binary tree if we need to keep track of parent in the helper function
+ witha root we add another TreeNode parameter starting as null
+ cos for root null is parent
+ and after every left and right jump we set the parent to parent of left or right node that is.
+ parent is the root node at that insatnce
+ 
+ 
+ https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/534/week-1-may-1st-may-7th/3322/
+ in BFS approach we add 1st node to queue and start while loop
+ then inside while loop we check for q size as n
+ and start inner loop from i=0 till n-1 
+ because inside each while loop we get to know how many elts at that level
+ 
+ 
+ https://leetcode.com/problems/online-stock-span/
+ in case of monotonic stack where we have to count how many lesser than
+ int res=1;
+        while(!s.isEmpty() && price >= s.peek()[1])
+            res+=s.pop()[0];
+        s.push(new int[]{res,price});
+ 
+ because at each point we are calculating how many less than then 
+ if at right something big then that will be 1 plus the value at left of it which is smaller than them
+ 
+ 
+ 
+ https://leetcode.com/explore/challenge/card/may-leetcoding-challenge/535/week-2-may-8th-may-14th/3324/
+ valid square root using binary search
+ 
+ 
+ 
+ https://leetcode.com/problems/find-all-duplicates-in-an-array/
+ when array questions having value from 1 to N   try to invert the sigh of arr index  values
+ 
+ 
+ 
+ rotating image
+ https://leetcode.com/problems/find-all-duplicates-in-an-array/  best explanantion
+ /*
+ * clockwise rotate
+ * first reverse up to down, then swap the symmetry 
+ * 1 2 3     7 8 9     7 4 1
+ * 4 5 6  => 4 5 6  => 8 5 2
+ * 7 8 9     1 2 3     9 6 3
+*/
+anti clockwise
+/*
+ * anticlockwise rotate
+ * first reverse left to right, then swap the symmetry
+ * 1 2 3     3 2 1     3 6 9
+ * 4 5 6  => 6 5 4  => 2 5 8
+ * 7 8 9     9 8 7     1 4 7
+*/
+
+
+
+
+https://leetcode.com/problems/contiguous-array/submissions/
+instead of using a map we can use an array of length 2x 
+where we perform step like the number line points
+
+
+
+https://leetcode.com/problems/possible-bipartition/submissions/
+bipartition assign a node a colour 
+bfs it and go through its edges of the edge have same colour cant do anythin
+go through the program well detailed comments
